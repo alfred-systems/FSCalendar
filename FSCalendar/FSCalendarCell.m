@@ -109,7 +109,7 @@
         CGFloat height = titleHeight + subtitleHeight;
         _titleLabel.frame = CGRectMake(
                                        self.preferredTitleOffset.x,
-                                       (self.contentView.fs_height*5.0/6.0-height)*0.5+self.preferredTitleOffset.y,
+                                       (self.contentView.fs_height*6.0/6.0-height)*0.5+self.preferredTitleOffset.y,
                                        self.contentView.fs_width,
                                        titleHeight
                                        );
@@ -124,14 +124,14 @@
                                        self.preferredTitleOffset.x,
                                        self.preferredTitleOffset.y,
                                        self.contentView.fs_width,
-                                       floor(self.contentView.fs_height*5.0/6.0)
+                                       floor(self.contentView.fs_height*6.0/6.0)
                                        );
     }
     
     _imageView.frame = CGRectMake(self.preferredImageOffset.x, self.preferredImageOffset.y, self.contentView.fs_width, self.contentView.fs_height);
     
-    CGFloat titleHeight = self.bounds.size.height*5.0/6.0;
-    CGFloat diameter = MIN(self.bounds.size.height*5.0/6.0,self.bounds.size.width);
+    CGFloat titleHeight = self.bounds.size.height*6.0/6.0;
+    CGFloat diameter = MIN(self.bounds.size.height*6.0/6.0,self.bounds.size.width);
     diameter = diameter > FSCalendarStandardCellDiameter ? (diameter - (diameter-FSCalendarStandardCellDiameter)*0.5) : diameter;
     _shapeLayer.frame = CGRectMake((self.bounds.size.width-diameter)/2,
                                    (titleHeight-diameter)/2,
